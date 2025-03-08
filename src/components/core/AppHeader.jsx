@@ -60,11 +60,7 @@ export default function AppHeader() {
 
       {/* User Info */}
       <div className="flex items-center gap-2">
-        <img
-          src={userImg}
-          alt={appUser?.name}
-          className="w-8 h-8 rounded-full"
-        />
+        <img src={userImg} alt={appUser?.name} className=" rounded-[10px]" />
         <span className="text-2xl">{appUser?.name}</span>
       </div>
     </div>

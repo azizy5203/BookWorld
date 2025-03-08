@@ -15,7 +15,7 @@ export default function AppHeader() {
   const location = useLocation();
   const pathSegments = location.pathname
     .split("/")
-    .filter((segment) => segment !== ""); // Remove empty segments
+    .filter((segment) => segment !== "");
 
   let accumulatedPath = "";
 
@@ -24,10 +24,10 @@ export default function AppHeader() {
   const title = lastMatch?.handle?.title;
 
   return (
-    <div className="flex items-center justify-between pb-8 border-b border-[#B0B0B0]">
+    <div className="flex items-center justify-between pb-8 mb-10 border-b  border-[#B0B0B0]">
       <div className="">
         <span className="text-2xl font-medium block">{title}</span>
-        {/* Start Breadcrumb */}
+
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink as={NavLink} to="/" className="font-light">
@@ -37,7 +37,7 @@ export default function AppHeader() {
           </BreadcrumbItem>
 
           {pathSegments.map((pathSegment, index) => {
-            accumulatedPath += `/${pathSegment}`; // Build path progressively
+            accumulatedPath += `/${pathSegment}`;
 
             return (
               <BreadcrumbItem key={index}>
@@ -55,10 +55,8 @@ export default function AppHeader() {
             );
           })}
         </BreadcrumbList>
-        {/* End Breadcrumb */}
       </div>
 
-      {/* User Info */}
       <div className="flex items-center gap-2">
         <img src={userImg} alt={appUser?.name} className=" rounded-[10px]" />
         <span className="text-2xl">{appUser?.name}</span>

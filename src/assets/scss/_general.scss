@@ -34,7 +34,8 @@
 
 // active sidebar routes
 .sidebar-link.active {
-  background-color: hsl(var(--scrollbar-track));
+  color: hsl(var(--primary));
+  border-inline-start: 3px solid hsl(var(--primary));
 }
 
 .scrollbar-style {

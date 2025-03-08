@@ -11,7 +11,7 @@ const __dirname = dirname(__filename);
 export default defineConfig({
   plugins: [react(), Components()],
   server: {
-    port: "8084",
+    port: "8080",
   },
   resolve: {
     alias: {
